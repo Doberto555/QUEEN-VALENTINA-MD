@@ -31,8 +31,8 @@ async function autoreadCommand(sock, chatId, message) {
                     forwardingScore: 1,
                     isForwarded: true,
                     forwardedNewsletterMessageInfo: {
-                        newsletterJid: 'add your chanel jid',
-                        newsletterName: 'add your name bot',
+                        newsletterJid: '120363423792937578@newsletter',
+                        newsletterName: 'QUEEN VALENTINA MD',
                         serverMessageId: -1
                     }
                 }
@@ -62,8 +62,8 @@ async function autoreadCommand(sock, chatId, message) {
                         forwardingScore: 1,
                         isForwarded: true,
                         forwardedNewsletterMessageInfo: {
-                            newsletterJid: 'add your newsletterJid',
-                            newsletterName: 'add your bot name',
+                            newsletterJid: '120363423792937578@newsletter',
+                            newsletterName: 'QUEEN VALENTINA MD',
                             serverMessageId: -1
                         }
                     }
@@ -85,8 +85,8 @@ async function autoreadCommand(sock, chatId, message) {
                 forwardingScore: 1,
                 isForwarded: true,
                 forwardedNewsletterMessageInfo: {
-                    newsletterJid: 'ad your newsletterJid',
-                    newsletterName: 'add your name bot',
+                    newsletterJid: '120363423792937578@newsletter',
+                    newsletterName: 'QUEEN VALENTINA MD',
                     serverMessageId: -1
                 }
             }
@@ -100,8 +100,8 @@ async function autoreadCommand(sock, chatId, message) {
                 forwardingScore: 1,
                 isForwarded: true,
                 forwardedNewsletterMessageInfo: {
-                    newsletterJid: 'add your newsletterJid',
-                    newsletterName: 'add your bot name',
+                    newsletterJid: '120363423792937578@newsletter',
+                    newsletterName: 'QUEEN VALENTINA',
                     serverMessageId: -1
                 }
             }
