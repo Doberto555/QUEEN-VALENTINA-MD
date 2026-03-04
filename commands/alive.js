@@ -1,7 +1,7 @@
 const settings = require("../settings");
 async function aliveCommand(sock, chatId, message) {
     try {
-        const message1 = `*🤖 LASER MD is Active!*\n\n` +
+        const message1 = `*🤖 QUEEN VALENTINA MD is Active!*\n\n` +
                        `*Version:* ${settings.version}\n` +
                        `*Status:* Online\n` +
                        `*Mode:* Public\n\n` +
@@ -18,8 +18,8 @@ async function aliveCommand(sock, chatId, message) {
                 forwardingScore: 999,
                 isForwarded: true,
                 forwardedNewsletterMessageInfo: {
-                    newsletterJid: '120363407561123100@newsletter',
-                    newsletterName: 'LASER MD',
+                    newsletterJid: '120363423792937578@newsletter',
+                    newsletterName: 'QUEEN VALENTINA MD',
                     serverMessageId: -1
                 }
             }
