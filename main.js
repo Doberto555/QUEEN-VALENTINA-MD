@@ -197,7 +197,7 @@ async function handleMessages(sock, messageUpdate, printLog) {
 
             if (buttonId === 'channel') {
                 await sock.sendMessage(chatId, {
-                    text: '📢 *Join our Channel:*\nhttps://whatsapp.com/channel/0029Va90zAnIHphOuO8Msp3A'
+                    text: '📢 *Join our Channel:*\nhttps://www.youtube.com/redirect?event=channel_header&redir_token=QUFFLUhqbG52dlZlWkpZVm40eUpXUDNUcjlTQU1udk4yd3xBQ3Jtc0trZ1NIZFRCbEZMX1F2YzE0UzhmUkxEZjJ2TWFKcnZqLVRFQWN1S21hM3J1SjFzaVptcUFLRDVFelhnakxSblpGVzFsblh4YUQxMDhjMkFRVXY2UnZKbmltc2hZWDRlSU5JendpT29zbGd4dWJhSlRpNA&q=https%3A%2F%2Fwhatsapp.com%2Fchannel%2F0029VbBulmY0LKZLRooVdU0i'
                 }, { quoted: message });
                 return;
             } else if (buttonId === 'owner') {
