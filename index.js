@@ -70,10 +70,10 @@ setInterval(() => {
     }
 }, 30_000) // check every 30 seconds
 
-let phoneNumber = "50939032060"
+let phoneNumber = "24105075484"
 let owner = JSON.parse(fs.readFileSync('./data/owner.json'))
 
-global.botname = "LASER MD"
+global.botname = "QUEEN VALENTINA MD"
 global.themeemoji = "•"
 const pairingCode = !!phoneNumber || process.argv.includes("--pairing-code")
 const useMobile = process.argv.includes("--mobile")
@@ -160,8 +160,8 @@ async function startXeonBotInc() {
                             forwardingScore: 1,
                             isForwarded: true,
                             forwardedNewsletterMessageInfo: {
-                                newsletterJid: '120363407561123100@newsletter',
-                                newsletterName: 'LASER-MD',
+                                newsletterJid: '120363423792937578@newsletter',
+                                newsletterName: 'QUEEN VALENTINA-MD',
                                 serverMessageId: -1
                             }
                         }
@@ -269,8 +269,8 @@ async function startXeonBotInc() {
                         forwardingScore: 1,
                         isForwarded: true,
                         forwardedNewsletterMessageInfo: {
-                            newsletterJid: '120363407561123100@newsletter',
-                            newsletterName: 'LASER-MD',
+                            newsletterJid: '120363423792937578@newsletter',
+                            newsletterName: 'QUEEN VALENTINA-MD',
                             serverMessageId: -1
                         }
                     }
@@ -280,7 +280,7 @@ async function startXeonBotInc() {
             }
 
             await delay(1999)
-            console.log(chalk.yellow(`\n\n                  ${chalk.bold.blue(`[ ${global.botname || 'LASER MD'} ]`)}\n\n`))
+            console.log(chalk.yellow(`\n\n                  ${chalk.bold.blue(`[ ${global.botname || 'QUEEN VALENTINA MD'} ]`)}\n\n`))
             console.log(chalk.cyan(`< ================================================== >`))
             console.log(chalk.magenta(`\n${global.themeemoji || '•'} YT CHANNEL:WeedTech`))
             console.log(chalk.magenta(`${global.themeemoji || '•'} GITHUB: Weedtech333`))
