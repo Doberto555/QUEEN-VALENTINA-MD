@@ -146,8 +146,8 @@ const soraCommand = require('./commands/sora');
 // Global settings
 global.packname = settings.packname;
 global.author = settings.author;
-global.channelLink = "https://www.youtube.com/@WeedTech-e1m";
-global.ytch = "WeedTech";
+global.channelLink = "http://www.youtube.com/@SIGMATECHDEV";
+global.ytch = "SigmaTech";
 
 // Add this near the top of main.js with other global configurations
 const channelInfo = {
@@ -155,8 +155,8 @@ const channelInfo = {
         forwardingScore: 1,
         isForwarded: true,
         forwardedNewsletterMessageInfo: {
-            newsletterJid: '120363407561123100@newsletter',
-            newsletterName: 'LASER MD',
+            newsletterJid: '120363423792937578@newsletter',
+            newsletterName: 'QUEEN VALENTINA MD',
             serverMessageId: -1
         }
     }
@@ -197,7 +197,7 @@ async function handleMessages(sock, messageUpdate, printLog) {
 
             if (buttonId === 'channel') {
                 await sock.sendMessage(chatId, {
-                    text: '📢 *Join our Channel:*\nhttps://www.youtube.com/redirect?event=channel_header&redir_token=QUFFLUhqbG52dlZlWkpZVm40eUpXUDNUcjlTQU1udk4yd3xBQ3Jtc0trZ1NIZFRCbEZMX1F2YzE0UzhmUkxEZjJ2TWFKcnZqLVRFQWN1S21hM3J1SjFzaVptcUFLRDVFelhnakxSblpGVzFsblh4YUQxMDhjMkFRVXY2UnZKbmltc2hZWDRlSU5JendpT29zbGd4dWJhSlRpNA&q=https%3A%2F%2Fwhatsapp.com%2Fchannel%2F0029VbBulmY0LKZLRooVdU0i'
+                    text: '📢 *Join our Channel:*\nhttps://whatsapp.com/channel/0029VbBulmY0LKZLRooVdU0i'
                 }, { quoted: message });
                 return;
             } else if (buttonId === 'owner') {
@@ -206,7 +206,7 @@ async function handleMessages(sock, messageUpdate, printLog) {
                 return;
             } else if (buttonId === 'support') {
                 await sock.sendMessage(chatId, {
-                    text: `🔗 *Support*\n\nhttps://chat.whatsapp.com/GA4WrOFythU6g3BFVubYM7?mode=wwt`
+                    text: `🔗 *Support*\n\nhttps://chat.whatsapp.com/EhFU7g19rYR6vW30BCKoak?mode=gi_t`
                 }, { quoted: message });
                 return;
             }
