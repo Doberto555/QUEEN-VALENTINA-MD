@@ -146,8 +146,8 @@ const soraCommand = require('./commands/sora');
 // Global settings
 global.packname = settings.packname;
 global.author = settings.author;
-global.channelLink = "http://www.youtube.com/@SIGMATECHDEV";
-global.ytch = "SigmaTech";
+global.channelLink = "YOUR CHANEL LINK";
+global.ytch = "YOUR NAME";
 
 // Add this near the top of main.js with other global configurations
 const channelInfo = {
@@ -155,8 +155,8 @@ const channelInfo = {
         forwardingScore: 1,
         isForwarded: true,
         forwardedNewsletterMessageInfo: {
-            newsletterJid: '120363423792937578@newsletter',
-            newsletterName: 'QUEEN VALENTINA MD',
+            newsletterJid: 'YOUR JID @newsletter',
+            newsletterName: 'YOUR BOT NAME',
             serverMessageId: -1
         }
     }
@@ -197,7 +197,7 @@ async function handleMessages(sock, messageUpdate, printLog) {
 
             if (buttonId === 'channel') {
                 await sock.sendMessage(chatId, {
-                    text: '📢 *Join our Channel:*\nhttps://whatsapp.com/channel/0029VbBulmY0LKZLRooVdU0i'
+                    text: '📢 *Join our Channel:*\nhttps://whatsapp.com/channel/0029Va90zAnIHphOuO8Msp3A'
                 }, { quoted: message });
                 return;
             } else if (buttonId === 'owner') {
@@ -206,7 +206,7 @@ async function handleMessages(sock, messageUpdate, printLog) {
                 return;
             } else if (buttonId === 'support') {
                 await sock.sendMessage(chatId, {
-                    text: `🔗 *Support*\n\nhttps://chat.whatsapp.com/EhFU7g19rYR6vW30BCKoak?mode=gi_t`
+                    text: `🔗 *Support*\n\nhttps://chat.whatsapp.com/GA4WrOFythU6g3BFVubYM7?mode=wwt`
                 }, { quoted: message });
                 return;
             }
