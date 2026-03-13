@@ -3,102 +3,74 @@ const fs = require('fs');
 const path = require('path');
 
 async function helpCommand(sock, chatId, message) {
-    
-const helpMessage = `
-╔══════════════════════╗
-      🤖 *${settings.botName || 'QUEEN VALENTINA-MD'}*
-╚══════════════════════╝
+    const helpMessage = `
+🌟✨ *WELCOME TO ${settings.botName || 'QUEEN VALENTINA-MD'}* ✨🌟
+🛠 Version: *${settings.version || '3.0.0'}*
+👑 Owner: *${settings.botOwner || 'Dev Sigma'}*
+📺 YouTube: ${global.ytch}
 
-┃ 👑 Owner : ${settings.botOwner || 'DevSigma'}
-┃ ⚙️ Version : ${settings.version || '3.0.0'}
-┃ 📡 Status : Online
+💥💥💥💥💥💥💥💥💥💥💥💥💥💥💥💥
 
-╭━━━〔 🌐 GENERAL 〕━━━╮
-┃ ⬡ .help / .menu
-┃ ⬡ .ping
-┃ ⬡ .alive
-┃ ⬡ .tts <text>
-┃ ⬡ .owner
-┃ ⬡ .joke / .quote / .fact
-┃ ⬡ .weather / .news
-┃ ⬡ .lyrics
-╰━━━━━━━━━━━━━━━━━━━╯
+🚀 *GENERAL COMMANDS* 🚀
+🎯 .help | .menu
+🎯 .ping | .alive
+🎯 .tts <text> | .owner
+🎯 .joke | .quote | .fact
+🎯 .weather | .news
+🎯 .attp | .lyrics
+🎯 .8ball | .groupinfo
+🎯 .staff | .vv
+🎯 .trt | .ss | .jid | .url
 
-╭━━━〔 👮 ADMIN 〕━━━╮
-┃ ⬡ .ban
-┃ ⬡ .kick
-┃ ⬡ .warn
-┃ ⬡ .promote
-┃ ⬡ .demote
-┃ ⬡ .mute / .unmute
-┃ ⬡ .delete
-┃ ⬡ .tagall
-┃ ⬡ .hidetag
-┃ ⬡ .antilink
-╰━━━━━━━━━━━━━━━━━━━╯
+🛡️ *ADMIN COMMANDS* 🛡️
+⚔️ .ban | .kick | .warn
+⚔️ .promote | .demote
+⚔️ .mute | .unmute
+⚔️ .delete | .clear
+⚔️ .tagall | .hidetag
+⚔️ .antilink | .antibadword
+⚔️ .welcome | .goodbye
+⚔️ .setgname | .setgpp
 
-╭━━━〔 🔒 OWNER 〕━━━╮
-┃ ⬡ .mode public
-┃ ⬡ .mode private
-┃ ⬡ .clearsession
-┃ ⬡ .cleartmp
-┃ ⬡ .update
-┃ ⬡ .settings
-┃ ⬡ .anticall
-┃ ⬡ .pmblocker
-╰━━━━━━━━━━━━━━━━━━━╯
+🔒 *OWNER COMMANDS* 🔒
+👑 .mode <public/private>
+👑 .clearsession | .cleartmp
+👑 .update | .settings
+👑 .autostatus | .autoread
+👑 .anticall | .pmblocker
+👑 .setpp | .setmention
 
-╭━━━〔 🎨 EDITING 〕━━━╮
-┃ ⬡ .sticker
-┃ ⬡ .remini
-┃ ⬡ .removebg
-┃ ⬡ .blur
-┃ ⬡ .crop
-┃ ⬡ .meme
-┃ ⬡ .emojimix
-╰━━━━━━━━━━━━━━━━━━━╯
+🎨 *EDITING* 🎨
+🖌️ .sticker | .simage
+🖌️ .remini | .removebg
+🖌️ .blur | .crop | .meme
+🖌️ .take | .emojimix
+🖌️ .igs | .igsc
 
-╭━━━〔 🤖 AI 〕━━━╮
-┃ ⬡ .gpt
-┃ ⬡ .gemini
-┃ ⬡ .imagine
-┃ ⬡ .flux
-┃ ⬡ .sora
-╰━━━━━━━━━━━━━━━━━━━╯
+🧠 *AI & GAMES* 🧠
+🤖 .gpt | .gemini
+🖼️ .imagine | .flux | .sora
+🎮 .tictactoe | .hangman
+🎮 .trivia | .truth | .dare
 
-╭━━━〔 📥 DOWNLOADER 〕━━━╮
-┃ ⬡ .play
-┃ ⬡ .song
-┃ ⬡ .video
-┃ ⬡ .spotify
-┃ ⬡ .ytmp4
-┃ ⬡ .instagram
-┃ ⬡ .facebook
-┃ ⬡ .tiktok
-╰━━━━━━━━━━━━━━━━━━━╯
+📥 *DOWNLOADER* 📥
+⬇️ .play | .song | .video
+⬇️ .spotify | .ytmp4
+⬇️ .instagram | .facebook
+⬇️ .tiktok
 
-╭━━━〔 🎮 GAMES 〕━━━╮
-┃ ⬡ .tictactoe
-┃ ⬡ .hangman
-┃ ⬡ .trivia
-┃ ⬡ .truth
-┃ ⬡ .dare
-╰━━━━━━━━━━━━━━━━━━━╯
+🔤 *TEXTMAKER* 🔤
+✏️ .neon | .glitch | .fire
+✏️ .ice | .snow | .matrix
+✏️ .hacker | .devil | .sand
 
-╭━━━〔 💻 SYSTEM 〕━━━╮
-┃ ⬡ .git
-┃ ⬡ .github
-┃ ⬡ .repo
-┃ ⬡ .script
-╰━━━━━━━━━━━━━━━━━━━╯
+💻 *SYSTEM* 💻
+💾 .git | .github
+💾 .sc | .repo | .script
 
-╔══════════════════════╗
-   🚀 *Best Bot in the World*
-          By SigmaTech
-╚══════════════════════╝
+🌈✨ *Join our channel for updates!* ✨🌈
+💥💥💥💥💥💥💥💥💥💥💥💥💥💥💥💥
 `;
-
-*Join our channel for updates:*`;
 
     try {
         const imagePath = path.join(__dirname, '../assets/bot_image.jpg');
