@@ -3,81 +3,100 @@ const fs = require('fs');
 const path = require('path');
 
 async function helpCommand(sock, chatId, message) {
-    const helpMessage = `
-╭━━━━〔 *${settings.botName || 'QUEEN VALENTINA-MD'}* 〕━━━━╮
-┃ 🛠️ Version: *${settings.version || '3.0.0'}*
-┃ 👤 Owner: *${settings.botOwner || 'DevSigma'}*
-┃ 📺 YT: ${global.ytch}
-╰━━━━━━━━━━━━━━━━━━━━━━━╯
+    
+const helpMessage = `
+╔══════════════════════╗
+      🤖 *${settings.botName || 'QUEEN VALENTINA-MD'}*
+╚══════════════════════╝
 
-*COMMAND LIST:*
+┃ 👑 Owner : ${settings.botOwner || 'DevSigma'}
+┃ ⚙️ Version : ${settings.version || '3.0.0'}
+┃ 📡 Status : Online
 
-╭───〔 🌐 *GENERAL* 〕───╮
-│ ● .help | .menu
-│ ● .ping
-│ ● .alive
-│ ● .tts <text>
-│ ● .owner
-│ ● .joke | .quote | .fact
-│ ● .weather | .news
-│ ● .attp | .lyrics
-│ ● .8ball | .groupinfo
-│ ● .staff | .vv
-│ ● .trt | .ss | .jid | .url
-╰━━━━━━━━━━━━━━━━━━━━━━╯
+╭━━━〔 🌐 GENERAL 〕━━━╮
+┃ ⬡ .help / .menu
+┃ ⬡ .ping
+┃ ⬡ .alive
+┃ ⬡ .tts <text>
+┃ ⬡ .owner
+┃ ⬡ .joke / .quote / .fact
+┃ ⬡ .weather / .news
+┃ ⬡ .lyrics
+╰━━━━━━━━━━━━━━━━━━━╯
 
-╭───〔 👮 *ADMIN* 〕───╮
-│ ✧ .ban | .kick | .warn
-│ ✧ .promote | .demote
-│ ✧ .mute | .unmute
-│ ✧ .delete | .clear
-│ ✧ .tagall | .hidetag
-│ ✧ .antilink | .antibadword
-│ ✧ .welcome | .goodbye
-│ ✧ .setgname | .setgpp
-╰━━━━━━━━━━━━━━━━━━━━━━╯
+╭━━━〔 👮 ADMIN 〕━━━╮
+┃ ⬡ .ban
+┃ ⬡ .kick
+┃ ⬡ .warn
+┃ ⬡ .promote
+┃ ⬡ .demote
+┃ ⬡ .mute / .unmute
+┃ ⬡ .delete
+┃ ⬡ .tagall
+┃ ⬡ .hidetag
+┃ ⬡ .antilink
+╰━━━━━━━━━━━━━━━━━━━╯
 
-╭───〔 🔒 *OWNER* 〕───╮
-│ ◈ .mode <public/private>
-│ ◈ .clearsession | .cleartmp
-│ ◈ .update | .settings
-│ ◈ .autostatus | .autoread
-│ ◈ .anticall | .pmblocker
-│ ◈ .setpp | .setmention
-╰━━━━━━━━━━━━━━━━━━━━━━╯
+╭━━━〔 🔒 OWNER 〕━━━╮
+┃ ⬡ .mode public
+┃ ⬡ .mode private
+┃ ⬡ .clearsession
+┃ ⬡ .cleartmp
+┃ ⬡ .update
+┃ ⬡ .settings
+┃ ⬡ .anticall
+┃ ⬡ .pmblocker
+╰━━━━━━━━━━━━━━━━━━━╯
 
-╭───〔 🎨 *EDITING* 〕───╮
-│ 🖋️ .sticker | .simage
-│ 🖋️ .remini | .removebg
-│ 🖋️ .blur | .crop | .meme
-│ 🖋️ .take | .emojimix
-│ 🖋️ .igs | .igsc
-╰━━━━━━━━━━━━━━━━━━━━━━╯
+╭━━━〔 🎨 EDITING 〕━━━╮
+┃ ⬡ .sticker
+┃ ⬡ .remini
+┃ ⬡ .removebg
+┃ ⬡ .blur
+┃ ⬡ .crop
+┃ ⬡ .meme
+┃ ⬡ .emojimix
+╰━━━━━━━━━━━━━━━━━━━╯
 
-╭───〔 🤖 *AI & GAMES* 〕───╮
-│ 🧠 .gpt | .gemini
-│ 🖼️ .imagine | .flux | .sora
-│ 🎮 .tictactoe | .hangman
-│ 🎮 .trivia | .truth | .dare
-╰━━━━━━━━━━━━━━━━━━━━━━╯
+╭━━━〔 🤖 AI 〕━━━╮
+┃ ⬡ .gpt
+┃ ⬡ .gemini
+┃ ⬡ .imagine
+┃ ⬡ .flux
+┃ ⬡ .sora
+╰━━━━━━━━━━━━━━━━━━━╯
 
-╭───〔 📥 *DOWNLOADER* 〕───╮
-│ ↓ .play | .song | .video
-│ ↓ .spotify | .ytmp4
-│ ↓ .instagram | .facebook
-│ ↓ .tiktok
-╰━━━━━━━━━━━━━━━━━━━━━━╯
+╭━━━〔 📥 DOWNLOADER 〕━━━╮
+┃ ⬡ .play
+┃ ⬡ .song
+┃ ⬡ .video
+┃ ⬡ .spotify
+┃ ⬡ .ytmp4
+┃ ⬡ .instagram
+┃ ⬡ .facebook
+┃ ⬡ .tiktok
+╰━━━━━━━━━━━━━━━━━━━╯
 
-╭───〔 🔤 *TEXTMAKER* 〕───╮
-│ ✎ .neon | .glitch | .fire
-│ ✎ .ice | .snow | .matrix
-│ ✎ .hacker | .devil | .sand
-╰━━━━━━━━━━━━━━━━━━━━━━╯
+╭━━━〔 🎮 GAMES 〕━━━╮
+┃ ⬡ .tictactoe
+┃ ⬡ .hangman
+┃ ⬡ .trivia
+┃ ⬡ .truth
+┃ ⬡ .dare
+╰━━━━━━━━━━━━━━━━━━━╯
 
-╭───〔 💻 *SYSTEM* 〕───╮
-│ ⚙️ .git | .github
-│ ⚙️ .sc | .repo | .script
-╰━━━━━━━━━━━━━━━━━━━━━━╯
+╭━━━〔 💻 SYSTEM 〕━━━╮
+┃ ⬡ .git
+┃ ⬡ .github
+┃ ⬡ .repo
+┃ ⬡ .script
+╰━━━━━━━━━━━━━━━━━━━╯
+
+╔══════════════════════╗
+   🚀 *Best Bot in the World*
+          By SigmaTech
+╚══════════════════════╝
+`;
 
 *Join our channel for updates:*`;
 
