@@ -6,4 +6,4 @@ gr<div align="center">
 🧕𝐐𝐔𝐄𝐄𝐍 𝐕𝐀𝐋𝐄𝐍𝐓𝐈𝐍𝐀-𝐌𝐃🧕
 </h1>
 
-<img src="https://files.catbox.moe/u7emn2.jpg" width="160" style="border-radius:20px; box-shadow:0 0 40px #00ffea;" />
+<img src="https://h.uguu.se/QQHyKTcU.jpg" width="160" style="border-radius:20px; box-shadow:0 0 40px #00ffea;" />
